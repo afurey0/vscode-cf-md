@@ -2,7 +2,7 @@
   "name": "vscode-cf-md",
   "displayName": "ColdFusion in Markdown",
   "description": "ColdFusion syntax in markdown code blocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "afurey0",
   "publisher": "afurey0",
   "license": "MIT",

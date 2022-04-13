@@ -14,3 +14,11 @@ This VSCode extension adds better support for ColdFusion syntax in Markdown.
 ## Future Additions
 
 - Syntax highlighting in markdown preview via a markdown-it plugin. See the [VSCode documentation](https://code.visualstudio.com/api/extension-guides/markdown-extension#adding-support-for-new-syntax-with-markdownit-plugins).
+
+## Installation
+
+```
+npm install -g vsce
+vsce package --out dist
+code --install-extension dist/vscode-cf-md-VERSION.vsix
+```
