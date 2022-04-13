@@ -1,0 +1,83 @@
+{
+  "name": "vscode-cf-md",
+  "displayName": "ColdFusion in Markdown",
+  "description": "ColdFusion syntax in markdown code blocks",
+  "version": "0.0.1",
+  "author": "afurey",
+  "publisher": "afurey",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.8.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+		"cfml",
+		"coldfusion",
+		"lucee"
+	],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cfml-injection"
+      },
+      {
+        "id": "cfscript",
+        "aliases": [
+          "CFScript",
+          "cfscript"
+        ],
+        "configuration": "./cfscript-lang-config.json"
+      },
+      {
+				"id": "cfscript-injection"
+			}
+    ],
+    "grammars": [
+      {
+        "language": "cfml-injection",
+        "scopeName": "markdown.cfml.codeblock",
+        "path": "./syntaxes/cfml-codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.cfml": "cfml"
+        }
+      },
+      {
+				"language": "cfscript",
+				"scopeName": "embedding.cfscript",
+				"path": "./syntaxes/cfscript.tmLanguage.json",
+				"embeddedLanguages": {
+					"source.css": "css",
+					"meta.embedded.block.css": "css",
+					"source.js": "javascript",
+					"meta.embedded.block.js": "javascript",
+					"meta.embedded.line.js": "javascript",
+					"source.sql": "sql",
+					"meta.embedded.block.sql": "sql",
+					"meta.tag.cfml": "cfml",
+					"constant.character.escape.hash.cfml": "cfml",
+					"punctuation.definition.template-expression.begin.cfml": "cfml",
+					"meta.embedded.line.cfml": "cfml",
+					"meta.embedded.block.cfml": "cfml",
+					"punctuation.definition.template-expression.end.cfml": "cfml"
+				}
+			},
+      {
+				"language": "cfscript-injection",
+				"scopeName": "markdown.cfscript.codeblock",
+				"path": "./syntaxes/cfscript-codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+				"embeddedLanguages": {
+					"meta.embedded.block.cfscript": "cfscript"
+				}
+			}
+    ]
+  },
+  "dependencies": {  }
+}
