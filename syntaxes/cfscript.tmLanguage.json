@@ -2149,52 +2149,6 @@
         }
       ]
     },
-    "tag-generic-attribute": {
-      "patterns": [
-        {
-          "include": "#source-cfml-tag-comments"
-        },
-        {
-          "match": "\\b([a-zA-Z_][\\w:-]*)\\b",
-          "captures": {
-            "1": {
-              "name": "entity.other.attribute-name.cfml"
-            }
-          }
-        },
-        {
-          "begin": "=",
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.separator.key-value.cfml"
-            }
-          },
-          "end": "(?<=[^\\s=])|(?=[</>{;])",
-          "patterns": [
-            {
-              "include": "#source-cfml-tag-comments"
-            },
-            {
-              "include": "#source-cfml-string"
-            },
-            {
-              "name": "string.unquoted.cfml",
-              "begin": "(?=[^\\s</>{;\\'\"])",
-              "end": "(?=[\\s</>{;])",
-              "patterns": [
-                {
-                  "include": "#hash-delimiters"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "invalid.illegal.attribute-name.cfml",
-          "match": "\\S+"
-        }
-      ]
-    },
     "source-cfml-script-tag-in-script": {
       "patterns": [
         {
