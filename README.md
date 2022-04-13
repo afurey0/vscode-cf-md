@@ -8,8 +8,8 @@ This VSCode extension adds better support for ColdFusion syntax in Markdown.
 
 ## Features
 
-- CFML syntax highlighting in fenced code blocks based on [this](https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example) repository.
-- CFScript syntax highlighting in fenced code blocks. Grammar is based on the one used by [vscode-cfml](https://github.com/KamasamaK/vscode-cfml).
+- Adds CFML syntax highlighting to fenced code blocks in Markdown. This functionality is based on [this](https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example) repository. To use, start your codeblock with `cfml` immediately after the three backticks.
+- Adds CFScript syntax highlighting in fenced code blocks. Grammar is based on the one used by [vscode-cfml](https://github.com/KamasamaK/vscode-cfml). To use, start your codeblock with `cfscript` immediately after the three backticks.
 
 ## Future Additions
 
